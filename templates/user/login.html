@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>登录</title>
+        {% load static %}
+        <link href="{% static 'css/loginP.css' %}" type="text/css" rel="stylesheet"/>
+        <link href="{% static 'css/user.css' %}" type="text/css" rel="stylesheet"/>
+        <script type="text/javascript" src="{% static 'js/identify.js' %}"></script>
+        <script type="text/javascript" src="{% static 'user/js/login.js' %}"></script>
+        <script type="text/javascript" src="{% static 'user/js/md5.js' %}"></script>
+        <script type="text/javascript" src="{% static 'user/js/register.js' %}"></script>
+    </head>
+    <body>
+        <div id="topBar">
+            <div class="topContent">
+                <i></i>
+                <p>自动化管理平台</p>
+                <span>帮助</span>
+            </div>
+        </div>
+
+        <div id="main">
+            <div id="sign_in_part" class="login_form">
+                <p class="title_caption">账号登录</p>
+                <div class="login_block">
+                    <form method="post" action="#">
+                        <fieldset>
+                            <h1 id="login-info">用户登录</h1>
+                            <div class="login_input">
+                                <input type="text" id="checkInID" name="checkInID" placeholder="请输入账号" required/>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="login_input">
+                                <input type="password" id="checkInPass" name="checkInPass" placeholder="请输入密码" required/>
+                                <div class="clear"></div>
+                            </div>
+                            <div>
+                                <img src="/user/check_code/" id="icode" alt="" onclick="changeCode();">
+                            </div>
+                            <div>
+                                <input type="text" name="imgcode" placeholder="请输入验证码">
+                            </div>
+                            <div class="login_sub_in">
+                                <input type="button" value="登录" id="subBut"/>
+                            </div>
+                        </fieldset>
+                        <span>还没有账号？<a href="www.baidu.com">点击这里注册</a></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="foot">
+            <p>上海逻域</p>
+        </div>
+    </body>
+</html>
